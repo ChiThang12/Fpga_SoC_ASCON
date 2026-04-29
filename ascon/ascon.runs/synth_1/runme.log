@@ -1,0 +1,647 @@
+
+*** Running vivado
+    with args -log ascon_ip_dut_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ascon_ip_dut_wrapper.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source ascon_ip_dut_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1243.363 ; gain = 8.984
+Command: read_checkpoint -auto_incremental -incremental D:/PROJECT_RISCV_ASCON/fpga/ascon/ascon.srcs/utils_1/imports/synth_1/ascon_ip_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/PROJECT_RISCV_ASCON/fpga/ascon/ascon.srcs/utils_1/imports/synth_1/ascon_ip_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top ascon_ip_dut_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18308
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1243.363 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ascon_ip_dut_wrapper' [D:/PROJECT_RISCV_ASCON/fpga/ascon/ascon.srcs/sources_1/new/ascon_ip_dut_wrapper.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ascon_ip_top' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_top.v:42]
+	Parameter G_COMB_RND_128 bound to: 6 - type: integer 
+	Parameter G_COMB_RND_128A bound to: 4 - type: integer 
+	Parameter G_SBOX_PIPELINE bound to: 0 - type: integer 
+	Parameter G_DUAL_RATE bound to: 1 - type: integer 
+	Parameter G_AXI_DATA_W bound to: 64 - type: integer 
+	Parameter S_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter S_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter S_ID_WIDTH bound to: 4 - type: integer 
+	Parameter M_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter M_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter M_ID_WIDTH bound to: 4 - type: integer 
+	Parameter RD_FIFO_DEPTH bound to: 4 - type: integer 
+	Parameter WR_FIFO_DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ascon_axi_slave' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_axi_slave.v:38]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ID_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_axi_slave.v:345]
+WARNING: [Synth 8-6014] Unused sequential element rd_addr_lat_reg was removed.  [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_axi_slave.v:528]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_axi_slave' (1#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_axi_slave.v:38]
+INFO: [Synth 8-6157] synthesizing module 'ascon_CORE' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_CORE.v:24]
+	Parameter G_COMB_RND_128 bound to: 6 - type: integer 
+	Parameter G_COMB_RND_128A bound to: 4 - type: integer 
+	Parameter G_SBOX_PIPELINE bound to: 0 - type: integer 
+	Parameter G_DUAL_RATE bound to: 1 - type: integer 
+	Parameter G_AXI_DATA_W bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ascon_INITIALIZATION' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_INITIALIZATION.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_INITIALIZATION' (2#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_INITIALIZATION.v:20]
+INFO: [Synth 8-6157] synthesizing module 'ascon_STATE_REGISTER' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_STATE_REGISTER.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_STATE_REGISTER' (3#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_STATE_REGISTER.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ascon_DATAPATH' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_datapath.v:27]
+	Parameter G_DUAL_RATE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ascon_DATAPATH' (4#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_datapath.v:27]
+INFO: [Synth 8-6157] synthesizing module 'ascon_PERMUTATION' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:42]
+	Parameter G_SBOX_PIPELINE bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ASCON_ROUND_COMB' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_ROUND_COMB.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ASCON_ROUND_COMB' (5#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_ROUND_COMB.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_PERMUTATION' (6#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:42]
+INFO: [Synth 8-6157] synthesizing module 'ascon_TAG_GENERATOR' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_TAG_GENERATOR.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_TAG_GENERATOR' (7#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_TAG_GENERATOR.v:20]
+INFO: [Synth 8-6157] synthesizing module 'ascon_TAG_COMPARATOR' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_TAG_COMPARATOR.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_TAG_COMPARATOR' (8#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_TAG_COMPARATOR.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ascon_CONTROLLER' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_CONTROLLER.v:38]
+	Parameter G_COMB_RND_128 bound to: 6 - type: integer 
+	Parameter G_COMB_RND_128A bound to: 4 - type: integer 
+	Parameter G_SBOX_PIPELINE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ascon_CONTROLLER' (9#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_CONTROLLER.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_CORE' (10#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_CORE.v:24]
+INFO: [Synth 8-6157] synthesizing module 'ascon_dma' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:58]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter RD_FIFO_DEPTH bound to: 4 - type: integer 
+	Parameter WR_FIFO_DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sync_fifo' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/sync_fifo.v:35]
+	Parameter WIDTH bound to: 64 - type: integer 
+	Parameter DEPTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sync_fifo' (11#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/sync_fifo.v:35]
+WARNING: [Synth 8-7071] port 'fwft_dout' of module 'sync_fifo' is unconnected for instance 'u_rd_fifo' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:225]
+WARNING: [Synth 8-7071] port 'fwft_valid' of module 'sync_fifo' is unconnected for instance 'u_rd_fifo' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:225]
+WARNING: [Synth 8-7023] instance 'u_rd_fifo' of module 'sync_fifo' has 11 connections declared, but only 9 given [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:225]
+INFO: [Synth 8-6157] synthesizing module 'sync_fifo__parameterized0' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/sync_fifo.v:35]
+	Parameter WIDTH bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sync_fifo__parameterized0' (11#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/sync_fifo.v:35]
+WARNING: [Synth 8-689] width (4) of port connection 'count' does not match port width (6) of module 'sync_fifo__parameterized0' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:254]
+WARNING: [Synth 8-7071] port 'fwft_dout' of module 'sync_fifo' is unconnected for instance 'u_wr_fifo' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:245]
+WARNING: [Synth 8-7071] port 'fwft_valid' of module 'sync_fifo' is unconnected for instance 'u_wr_fifo' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:245]
+WARNING: [Synth 8-7023] instance 'u_wr_fifo' of module 'sync_fifo' has 11 connections declared, but only 9 given [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:245]
+INFO: [Synth 8-6157] synthesizing module 'dma_ctrl_fsm' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/dma_ctrl_fsm.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'dma_ctrl_fsm' (12#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/dma_ctrl_fsm.v:18]
+WARNING: [Synth 8-7071] port 'rd_fifo_fwft_dout' of module 'dma_ctrl_fsm' is unconnected for instance 'u_ctrl_fsm' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:260]
+WARNING: [Synth 8-7071] port 'rd_fifo_fwft_valid' of module 'dma_ctrl_fsm' is unconnected for instance 'u_ctrl_fsm' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:260]
+WARNING: [Synth 8-7023] instance 'u_ctrl_fsm' of module 'dma_ctrl_fsm' has 43 connections declared, but only 41 given [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:260]
+INFO: [Synth 8-6157] synthesizing module 'dma_read_engine' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/dma_read_engine.v:37]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter AXI_ID_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/dma_read_engine.v:143]
+INFO: [Synth 8-6155] done synthesizing module 'dma_read_engine' (13#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/dma_read_engine.v:37]
+WARNING: [Synth 8-7071] port 'dma_start' of module 'dma_read_engine' is unconnected for instance 'u_rd_engine' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:319]
+WARNING: [Synth 8-7023] instance 'u_rd_engine' of module 'dma_read_engine' has 28 connections declared, but only 27 given [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:319]
+INFO: [Synth 8-6157] synthesizing module 'dma_write_engine' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/dma_write_engine.v:37]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter AXI_ID_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'dma_write_engine' (14#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/dma_write_engine.v:37]
+WARNING: [Synth 8-7071] port 'total_wr_beats' of module 'dma_write_engine' is unconnected for instance 'u_wr_engine' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:360]
+WARNING: [Synth 8-7071] port 'fifo_fwft_dout' of module 'dma_write_engine' is unconnected for instance 'u_wr_engine' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:360]
+WARNING: [Synth 8-7071] port 'fifo_fwft_valid' of module 'dma_write_engine' is unconnected for instance 'u_wr_engine' [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:360]
+WARNING: [Synth 8-7023] instance 'u_wr_engine' of module 'dma_write_engine' has 32 connections declared, but only 29 given [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:360]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_dma' (15#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_dma.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_ip_top' (16#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_top.v:42]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_dut'. This will prevent further optimization [D:/PROJECT_RISCV_ASCON/fpga/ascon/ascon.srcs/sources_1/new/ascon_ip_dut_wrapper.v:152]
+INFO: [Synth 8-6155] done synthesizing module 'ascon_ip_dut_wrapper' (17#1) [D:/PROJECT_RISCV_ASCON/fpga/ascon/ascon.srcs/sources_1/new/ascon_ip_dut_wrapper.v:22]
+WARNING: [Synth 8-7129] Port fifo_dout[31] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[30] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[29] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[28] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[27] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[26] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[25] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[24] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[23] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[22] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[21] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[20] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[19] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[18] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[17] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[16] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[15] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[14] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[13] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[12] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[11] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[10] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[9] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[8] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[7] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[6] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[5] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[4] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[3] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[2] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[1] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_dout[0] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[3] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[2] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[1] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_BID[0] in module dma_write_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[3] in module dma_read_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[2] in module dma_read_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[1] in module dma_read_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_RID[0] in module dma_read_engine is either unconnected or has no load
+WARNING: [Synth 8-7129] Port byte_len[2] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port byte_len[1] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port byte_len[0] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_busy in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[63] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[62] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[61] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[60] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[59] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[58] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[57] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[56] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[55] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[54] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[53] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[52] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[51] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[50] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[49] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[48] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[47] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[46] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[45] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[44] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[43] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[42] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[41] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[40] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[39] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[38] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[37] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[36] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[35] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[34] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[33] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[32] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[31] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[30] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[29] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[28] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[27] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[26] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[25] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[24] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[23] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[22] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[21] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[20] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[19] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[18] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[17] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[16] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[15] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[14] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[13] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[12] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[11] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[10] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[9] in module dma_ctrl_fsm is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_fifo_dout[8] in module dma_ctrl_fsm is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1243.363 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1243.363 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1243.363 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.447 . Memory (MB): peak = 1243.363 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/PROJECT_RISCV_ASCON/fpga/ascon/ascon.srcs/constrs_1/new/ascon_constraints.xdc]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [D:/PROJECT_RISCV_ASCON/fpga/ascon/ascon.srcs/constrs_1/new/ascon_constraints.xdc:54]
+Finished Parsing XDC File [D:/PROJECT_RISCV_ASCON/fpga/ascon/ascon.srcs/constrs_1/new/ascon_constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/PROJECT_RISCV_ASCON/fpga/ascon/ascon.srcs/constrs_1/new/ascon_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ascon_ip_dut_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ascon_ip_dut_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1331.680 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1331.680 ; gain = 0.000
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1331.680 ; gain = 88.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1331.680 ; gain = 88.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1331.680 ; gain = 88.316
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'ascon_axi_slave'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'ascon_axi_slave'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ascon_CONTROLLER'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'dma_read_engine'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'dma_write_engine'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 WR_IDLE |                               00 |                               00
+                 WR_DATA |                               01 |                               01
+                 WR_RESP |                               10 |                               10
+                 WR_DONE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'sequential' in module 'ascon_axi_slave'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 RD_IDLE |                                0 |                               00
+                RD_VALID |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'sequential' in module 'ascon_axi_slave'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                             0000 |                             0000
+             S_INIT_LOAD |                             0001 |                             0001
+             S_INIT_PERM |                             0010 |                             0010
+             S_POST_INIT |                             0011 |                             0011
+               S_AD_LOAD |                             0100 |                             0100
+               S_AD_PERM |                             0101 |                             0101
+               S_DOM_SEP |                             0110 |                             0110
+             S_DATA_LOAD |                             0111 |                             0111
+               S_PRE_FIN |                             1000 |                             1001
+              S_FIN_PERM |                             1001 |                             1010
+               S_TAG_GEN |                             1010 |                             1011
+                  S_DONE |                             1011 |                             1100
+             S_DATA_PERM |                             1100 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ascon_CONTROLLER'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 RD_IDLE |                               00 |                               00
+                 RD_ADDR |                               01 |                               01
+                 RD_DATA |                               10 |                               10
+                 RD_DONE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'dma_read_engine'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 WR_IDLE |                              000 |                              000
+                 WR_ADDR |                              001 |                              001
+               WR_LOAD_H |                              010 |                              010
+               WR_DATA_L |                              011 |                              011
+                 WR_BEAT |                              100 |                              100
+                 WR_RESP |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'dma_write_engine'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1331.680 ; gain = 88.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   30 Bit       Adders := 1     
+	   2 Input   29 Bit       Adders := 3     
+	   3 Input   29 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    6 Bit       Adders := 3     
+	   3 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 11    
+	   3 Input    3 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+	   3 Input     64 Bit         XORs := 62    
+	   2 Input     64 Bit         XORs := 22    
+	   2 Input      1 Bit         XORs := 5376  
+	   3 Input      1 Bit         XORs := 1536  
++---Registers : 
+	              320 Bit    Registers := 3     
+	              128 Bit    Registers := 4     
+	               64 Bit    Registers := 3     
+	               32 Bit    Registers := 36    
+	               29 Bit    Registers := 4     
+	               12 Bit    Registers := 1     
+	                8 Bit    Registers := 8     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 49    
++---RAMs : 
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
+	              256 Bit	(4 X 64 bit)          RAMs := 1     
++---Muxes : 
+	   4 Input  320 Bit        Muxes := 1     
+	   2 Input  320 Bit        Muxes := 6     
+	   2 Input  128 Bit        Muxes := 14    
+	   2 Input  121 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 48    
+	   4 Input   32 Bit        Muxes := 15    
+	   2 Input   29 Bit        Muxes := 8     
+	   4 Input   12 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 49    
+	   4 Input    8 Bit        Muxes := 1     
+	   6 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 15    
+	  13 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 4     
+	  13 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	  11 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 7     
+	  13 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 86    
+	   4 Input    1 Bit        Muxes := 34    
+	  13 Input    1 Bit        Muxes := 14    
+	   6 Input    1 Bit        Muxes := 23    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-6014] Unused sequential element u_rd_fifo/mem_reg was removed. 
+WARNING: [Synth 8-6014] Unused sequential element u_wr_fifo/mem_reg was removed. 
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_rd_state_reg) is unused and will be removed from module ascon_axi_slave.
+WARNING: [Synth 8-3332] Sequential element (u_rd_engine/FSM_sequential_state_reg[1]) is unused and will be removed from module ascon_dma.
+WARNING: [Synth 8-3332] Sequential element (u_rd_engine/FSM_sequential_state_reg[0]) is unused and will be removed from module ascon_dma.
+WARNING: [Synth 8-3332] Sequential element (u_wr_engine/FSM_sequential_state_reg[2]) is unused and will be removed from module ascon_dma.
+WARNING: [Synth 8-3332] Sequential element (u_wr_engine/FSM_sequential_state_reg[1]) is unused and will be removed from module ascon_dma.
+WARNING: [Synth 8-3332] Sequential element (u_wr_engine/FSM_sequential_state_reg[0]) is unused and will be removed from module ascon_dma.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:00 ; elapsed = 00:02:04 . Memory (MB): peak = 1486.215 ; gain = 242.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:09 ; elapsed = 00:02:14 . Memory (MB): peak = 1486.215 ; gain = 242.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:03:40 ; elapsed = 00:03:48 . Memory (MB): peak = 1800.062 ; gain = 556.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (u_slave/FSM_sequential_wr_state_reg[1]) is unused and will be removed from module ascon_ip_top.
+WARNING: [Synth 8-3332] Sequential element (u_slave/FSM_sequential_wr_state_reg[0]) is unused and will be removed from module ascon_ip_top.
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[319]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[319] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[318]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[318] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[317]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[317] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[316]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[316] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[315]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[315] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[314]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[314] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[313]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[313] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[312]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[312] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[311]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[311] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[310]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[310] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[309]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[309] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[308]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[308] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[307]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[307] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[306]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[306] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[305]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[305] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[304]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[304] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[303]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[303] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[302]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[302] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[301]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[301] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[300]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[300] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[299]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[299] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[298]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[298] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[297]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[297] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[296]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[296] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[295]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[295] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[294]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[294] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[293]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[293] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[292]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[292] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[291]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[291] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[290]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[290] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[289]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[289] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[288]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[288] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[287]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[287] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[286]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[286] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[285]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[285] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[284]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[284] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[283]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[283] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[282]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[282] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[281]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[281] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[280]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[280] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[279]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[279] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[278]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[278] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[277]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[277] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[276]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[276] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[275]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[275] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[274]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[274] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[273]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[273] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[272]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[272] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[271]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[271] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[270]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[270] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[269]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[269] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[268]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[268] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[267]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[267] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[266]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[266] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[265]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[265] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[264]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[264] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[263]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[263] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[262]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[262] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[261]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[261] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[260]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[260] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[259]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[259] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[258]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[258] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[257]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[257] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[256]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[256] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[255]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[255] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[254]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[254] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[253]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[253] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[252]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[252] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[251]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[251] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[250]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[250] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[249]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[249] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[248]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[248] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[247]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[247] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[246]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[246] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[245]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[245] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[244]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[244] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[243]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[243] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[242]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[242] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[241]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[241] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[240]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[240] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[239]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[239] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[238]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[238] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[237]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[237] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[236]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[236] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[235]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[235] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[234]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[234] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[233]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[233] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[232]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[232] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[231]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[231] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[230]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[230] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[229]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[229] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[228]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[228] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[227]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[227] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[226]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[226] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[225]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[225] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[224]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[224] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[223]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[223] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[222]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[222] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[221]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[221] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Synth 8-5966] Removing register instance (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[220]__0 ) from module (ascon_ip_top) as it has self-loop and (\u_core_cpu/u_perm/gen_comb_unroll.state_out_reg[220] ) is actual driver [D:/PROJECT_RISCV_ASCON/fpga/ascon/src/ascon_PERMUTATION.v:103]
+INFO: [Common 17-14] Message 'Synth 8-5966' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:59 ; elapsed = 00:04:08 . Memory (MB): peak = 2705.332 ; gain = 1461.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:04:06 ; elapsed = 00:04:16 . Memory (MB): peak = 2705.332 ; gain = 1461.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:06 ; elapsed = 00:04:16 . Memory (MB): peak = 2705.332 ; gain = 1461.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:08 ; elapsed = 00:04:18 . Memory (MB): peak = 2705.332 ; gain = 1461.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:04:08 ; elapsed = 00:04:18 . Memory (MB): peak = 2705.332 ; gain = 1461.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:04:09 ; elapsed = 00:04:19 . Memory (MB): peak = 2705.332 ; gain = 1461.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:04:09 ; elapsed = 00:04:19 . Memory (MB): peak = 2705.332 ; gain = 1461.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     2|
+|3     |LUT2 |   160|
+|4     |LUT3 |  2201|
+|5     |LUT4 |   308|
+|6     |LUT5 |  3002|
+|7     |LUT6 |  4300|
+|8     |FDCE |  1109|
+|9     |IBUF |     2|
+|10    |OBUF |     3|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:04:09 ; elapsed = 00:04:20 . Memory (MB): peak = 2705.332 ; gain = 1461.969
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1094 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:48 ; elapsed = 00:04:12 . Memory (MB): peak = 2705.332 ; gain = 1373.652
+Synthesis Optimization Complete : Time (s): cpu = 00:04:10 ; elapsed = 00:04:20 . Memory (MB): peak = 2705.332 ; gain = 1461.969
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.246 . Memory (MB): peak = 2705.332 ; gain = 0.000
+WARNING: [Netlist 29-101] Netlist 'ascon_ip_dut_wrapper' is not ideal for floorplanning, since the cellview 'ascon_PERMUTATION' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2705.332 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 5d835cf4
+INFO: [Common 17-83] Releasing license: Synthesis
+168 Infos, 132 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:23 ; elapsed = 00:04:36 . Memory (MB): peak = 2705.332 ; gain = 1461.969
+INFO: [Common 17-1381] The checkpoint 'D:/PROJECT_RISCV_ASCON/fpga/ascon/ascon.runs/synth_1/ascon_ip_dut_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ascon_ip_dut_wrapper_utilization_synth.rpt -pb ascon_ip_dut_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 15:07:35 2026...

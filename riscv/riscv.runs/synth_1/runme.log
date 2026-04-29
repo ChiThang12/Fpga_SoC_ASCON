@@ -1,0 +1,512 @@
+
+*** Running vivado
+    with args -log pynqz2_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pynqz2_top.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source pynqz2_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1243.945 ; gain = 10.258
+Command: read_checkpoint -auto_incremental -incremental D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/utils_1/imports/synth_1/pynqz2_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/utils_1/imports/synth_1/pynqz2_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top pynqz2_top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 476
+WARNING: [Synth 8-6901] identifier 'load_state' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:70]
+WARNING: [Synth 8-6901] identifier 'LOAD_IDLE' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:70]
+WARNING: [Synth 8-6901] identifier 'drain_state' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:71]
+WARNING: [Synth 8-6901] identifier 'DRAIN_IDLE' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:71]
+WARNING: [Synth 8-6901] identifier 'irq_flush_done' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_cpu_core_v2.v:96]
+WARNING: [Synth 8-6901] identifier 'soc_lsu_sb_empty' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_cpu_core_v2.v:169]
+WARNING: [Synth 8-6901] identifier 'fence_stall' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_cpu_core_v2.v:238]
+WARNING: [Synth 8-6901] identifier 'mispredict_ex_r' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_cpu_core_v2.v:355]
+WARNING: [Synth 8-6901] identifier 'pc_src_ex_r' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_cpu_core_v2.v:355]
+WARNING: [Synth 8-6901] identifier 'mispredict_ex_r' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_cpu_core_v2.v:356]
+WARNING: [Synth 8-6901] identifier 'pc_src_ex_r' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_cpu_core_v2.v:357]
+WARNING: [Synth 8-6901] identifier 'target_pc_ex_r' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_cpu_core_v2.v:357]
+WARNING: [Synth 8-6901] identifier 'branch_target_id' is used before its declaration [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_cpu_core_v2.v:358]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1243.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pynqz2_top' [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/sources_1/new/pynqz2_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'riscv_cpu_core' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_cpu_core_v2.v:16]
+INFO: [Synth 8-6157] synthesizing module 'IFU' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/IFU.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'IFU' (1#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/IFU.v:13]
+INFO: [Synth 8-6157] synthesizing module 'PIPELINE_REG_IF_ID' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/PIPELINE_REG_IF_ID.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PIPELINE_REG_IF_ID' (2#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/PIPELINE_REG_IF_ID.v:1]
+INFO: [Synth 8-6157] synthesizing module 'control' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/control.v:1]
+INFO: [Synth 8-226] default block is never used [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/control.v:98]
+INFO: [Synth 8-226] default block is never used [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/control.v:121]
+INFO: [Synth 8-6155] done synthesizing module 'control' (3#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/control.v:1]
+INFO: [Synth 8-6157] synthesizing module 'reg_file' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/reg_file.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'reg_file' (4#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/reg_file.v:16]
+INFO: [Synth 8-6157] synthesizing module 'imm_gen' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/imm_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'imm_gen' (5#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/imm_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PIPELINE_REG_ID_EX' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/PIPELINE_REG_ID_EX.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PIPELINE_REG_ID_EX' (6#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/PIPELINE_REG_ID_EX.v:13]
+INFO: [Synth 8-6157] synthesizing module 'forwarding_unit' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/forwarding_unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'forwarding_unit' (7#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/forwarding_unit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'alu' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/alu.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (8#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/alu.v:12]
+INFO: [Synth 8-6157] synthesizing module 'branch_logic' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/branch_logic.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'branch_logic' (9#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/branch_logic.v:16]
+INFO: [Synth 8-6157] synthesizing module 'riscv_multiplier' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_multiplier.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_multiplier' (10#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_multiplier.v:19]
+INFO: [Synth 8-6157] synthesizing module 'PIPELINE_REG_EX_MEM' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/PIPELINE_REG_EX_MEM.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'PIPELINE_REG_EX_MEM' (11#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/PIPELINE_REG_EX_MEM.v:14]
+INFO: [Synth 8-6157] synthesizing module 'LSU' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:1]
+INFO: [Synth 8-226] default block is never used [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:279]
+WARNING: [Synth 8-7137] Register sb_addr_reg[0] in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:182]
+WARNING: [Synth 8-7137] Register sb_addr_reg[1] in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:182]
+WARNING: [Synth 8-7137] Register sb_addr_reg[2] in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:182]
+WARNING: [Synth 8-7137] Register sb_addr_reg[3] in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:182]
+WARNING: [Synth 8-7137] Register sb_wdata_reg[0] in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:183]
+WARNING: [Synth 8-7137] Register sb_wdata_reg[1] in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:183]
+WARNING: [Synth 8-7137] Register sb_wdata_reg[2] in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:183]
+WARNING: [Synth 8-7137] Register sb_wdata_reg[3] in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:183]
+WARNING: [Synth 8-7137] Register sb_wstrb_reg[0] in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:184]
+WARNING: [Synth 8-7137] Register sb_wstrb_reg[1] in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:184]
+WARNING: [Synth 8-7137] Register sb_wstrb_reg[2] in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:184]
+WARNING: [Synth 8-7137] Register sb_wstrb_reg[3] in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:184]
+WARNING: [Synth 8-7137] Register lq_addr_reg in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register lq_rd_reg in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register lq_funct3_reg in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register lq_fwd_reg in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-7137] Register lq_fwd_data_reg in module LSU has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'lq_addr_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "lq_addr_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'lq_rd_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "lq_rd_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'lq_funct3_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "lq_funct3_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'lq_fwd_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "lq_fwd_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'lq_fwd_data_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "lq_fwd_data_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'LSU' (12#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/LSU.v:1]
+INFO: [Synth 8-6157] synthesizing module 'PIPELINE_REG_MEM_WB' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/PIPELINE_REG_MEM_WB.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PIPELINE_REG_MEM_WB' (13#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/PIPELINE_REG_MEM_WB.v:13]
+INFO: [Synth 8-6157] synthesizing module 'wb_mux_stage' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/wb_mux_stage.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'wb_mux_stage' (14#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/wb_mux_stage.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hazard_detection' [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/hazard_detection.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_detection' (15#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/hazard_detection.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'riscv_cpu_core' (16#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/src/riscv_cpu_core_v2.v:16]
+WARNING: [Synth 8-3848] Net uart_tx in module/entity pynqz2_top does not have driver. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/sources_1/new/pynqz2_top.v:6]
+WARNING: [Synth 8-3848] Net tdo in module/entity pynqz2_top does not have driver. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/sources_1/new/pynqz2_top.v:14]
+WARNING: [Synth 8-3848] Net imem_rdata in module/entity pynqz2_top does not have driver. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/sources_1/new/pynqz2_top.v:21]
+WARNING: [Synth 8-3848] Net dcache_rdata in module/entity pynqz2_top does not have driver. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/sources_1/new/pynqz2_top.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pynqz2_top' (17#1) [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/sources_1/new/pynqz2_top.v:1]
+WARNING: [Synth 8-7129] Port uart_tx in module pynqz2_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdo in module pynqz2_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_rx in module pynqz2_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tms in module pynqz2_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tck in module pynqz2_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdi in module pynqz2_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1243.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1243.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1243.945 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 1243.945 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:28]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:29]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:32]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:33]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:36]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:44]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:47]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:48]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:51]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:59]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:60]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:63]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:64]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:67]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:77]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:78]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:81]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:89]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:90]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:91]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:94]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:97]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:98]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:101]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:102]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:105]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:106]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:107]
+CRITICAL WARNING: [Designutils 20-1307] Command 'set_max_fanout' is not supported in the xdc constraint file. [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc:108]
+Finished Parsing XDC File [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.srcs/constrs_1/new/riscv_constaint.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pynqz2_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/pynqz2_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1281.707 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1281.707 ; gain = 0.000
+WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1281.707 ; gain = 37.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1281.707 ; gain = 37.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 1281.707 ; gain = 37.762
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'load_state_reg' in module 'LSU'
+INFO: [Synth 8-802] inferred FSM for state register 'dbg_state_reg' in module 'riscv_cpu_core'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               LOAD_IDLE |                              001 |                               00
+             LOAD_DCACHE |                              010 |                               01
+             LOAD_RESULT |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'load_state_reg' using encoding 'one-hot' in module 'LSU'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             DBG_RUNNING |                              001 |                               00
+             DBG_HALTING |                              010 |                               01
+              DBG_HALTED |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'dbg_state_reg' using encoding 'one-hot' in module 'riscv_cpu_core'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1281.707 ; gain = 37.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input   64 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 4     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               34 Bit    Registers := 3     
+	               33 Bit    Registers := 2     
+	               32 Bit    Registers := 69    
+	               30 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                5 Bit    Registers := 12    
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 9     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 50    
++---Muxes : 
+	   2 Input   33 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 28    
+	  33 Input   32 Bit        Muxes := 2     
+	   6 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 5     
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 15    
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   4 Input    5 Bit        Muxes := 1     
+	   3 Input    5 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 7     
+	  11 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 3     
+	   6 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 3     
+	   4 Input    3 Bit        Muxes := 1     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 6     
+	   4 Input    2 Bit        Muxes := 1     
+	  11 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 92    
+	  11 Input    1 Bit        Muxes := 7     
+	   3 Input    1 Bit        Muxes := 8     
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP pp_lh_w, operation Mode is: A*B.
+DSP Report: operator pp_lh_w is absorbed into DSP pp_lh_w.
+DSP Report: Generating DSP pp_hl_w, operation Mode is: A*B.
+DSP Report: operator pp_hl_w is absorbed into DSP pp_hl_w.
+DSP Report: Generating DSP pp_hh_w, operation Mode is: A*B.
+DSP Report: operator pp_hh_w is absorbed into DSP pp_hh_w.
+DSP Report: Generating DSP pp_ll_w, operation Mode is: A*B.
+DSP Report: operator pp_ll_w is absorbed into DSP pp_ll_w.
+WARNING: [Synth 8-7129] Port uart_tx in module pynqz2_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdo in module pynqz2_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port uart_rx in module pynqz2_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tms in module pynqz2_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tck in module pynqz2_top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdi in module pynqz2_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 1281.707 ; gain = 37.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++-----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|riscv_multiplier | A*B         | 17     | 17     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|riscv_multiplier | A*B         | 17     | 17     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|riscv_multiplier | A*B         | 17     | 17     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|riscv_multiplier | A*B         | 17     | 17     | -      | -      | 34     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:59 . Memory (MB): peak = 1281.707 ; gain = 37.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:09 . Memory (MB): peak = 1348.922 ; gain = 104.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:13 . Memory (MB): peak = 1389.570 ; gain = 145.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[31] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[30] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[29] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[28] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[27] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[26] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[25] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[24] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[23] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[22] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[21] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[20] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[19] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[18] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:imem_rdata[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[31] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[30] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[29] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[28] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[27] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[26] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[25] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[24] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[23] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[22] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[21] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[20] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[19] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[18] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_cpu:dcache_rdata[0] to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:06 ; elapsed = 00:01:20 . Memory (MB): peak = 1403.121 ; gain = 159.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:06 ; elapsed = 00:01:20 . Memory (MB): peak = 1403.121 ; gain = 159.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:01:21 . Memory (MB): peak = 1403.121 ; gain = 159.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:01:21 . Memory (MB): peak = 1403.121 ; gain = 159.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:22 . Memory (MB): peak = 1403.121 ; gain = 159.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:07 ; elapsed = 00:01:22 . Memory (MB): peak = 1403.121 ; gain = 159.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    83|
+|3     |DSP48E1 |     4|
+|4     |LUT1    |    45|
+|5     |LUT2    |   291|
+|6     |LUT3    |   176|
+|7     |LUT4    |   266|
+|8     |LUT5    |   607|
+|9     |LUT6    |  1428|
+|10    |MUXF7   |   264|
+|11    |MUXF8   |   130|
+|12    |FDCE    |  1859|
+|13    |FDPE    |     8|
+|14    |FDRE    |   564|
+|15    |IBUF    |     2|
+|16    |OBUF    |     4|
+|17    |OBUFT   |     2|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:07 ; elapsed = 00:01:22 . Memory (MB): peak = 1403.121 ; gain = 159.176
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 71 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:55 ; elapsed = 00:01:18 . Memory (MB): peak = 1403.121 ; gain = 121.414
+Synthesis Optimization Complete : Time (s): cpu = 00:01:07 ; elapsed = 00:01:22 . Memory (MB): peak = 1403.121 ; gain = 159.176
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.082 . Memory (MB): peak = 1403.121 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 481 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1418.859 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 38bec968
+INFO: [Common 17-83] Releasing license: Synthesis
+60 Infos, 118 Warnings, 29 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:32 . Memory (MB): peak = 1418.859 ; gain = 174.914
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.runs/synth_1/pynqz2_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pynqz2_top_utilization_synth.rpt -pb pynqz2_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 29 13:44:39 2026...

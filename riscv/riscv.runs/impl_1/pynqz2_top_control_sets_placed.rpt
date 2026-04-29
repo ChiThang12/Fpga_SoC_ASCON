@@ -1,0 +1,137 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Wed Apr 29 13:46:36 2026
+| Host         : ChiThang running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file pynqz2_top_control_sets_placed.rpt
+| Design       : pynqz2_top
+| Device       : xc7z020
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    59 |
+|    Minimum number of control sets                        |    59 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   113 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    59 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    55 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |             113 |           63 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             400 |          108 |
+| Yes          | No                    | Yes                    |            1754 |          712 |
+| Yes          | Yes                   | No                     |             164 |           35 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+-----------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal    |                 Enable Signal                 |              Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+-----------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/sb_addr[1][31]_i_1_n_0         | u_cpu/lsu_unit/sb_wstrb[1][0]_i_1_n_0     |                2 |              9 |         4.50 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/sb_addr[3][31]_i_1_n_0         | u_cpu/lsu_unit/sb_wstrb[3][0]_i_1_n_0     |                2 |              9 |         4.50 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/sb_addr                        | u_cpu/lsu_unit/sb_wstrb[0][0]_i_1_n_0     |                3 |              9 |         3.00 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/sb_addr[2][31]_i_1_n_0         | u_cpu/lsu_unit/sb_wstrb[2][0]_i_1_n_0     |                3 |              9 |         3.00 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[7][31]_i_1_n_0  | rst                                       |               21 |             32 |         1.52 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[12][31]_i_1_n_0 | rst                                       |               12 |             32 |         2.67 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers                 | rst                                       |               16 |             32 |         2.00 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[19][31]_i_1_n_0 | rst                                       |               10 |             32 |         3.20 |
+|  sys_clk_IBUF_BUFG | u_cpu/id_ex_reg/read_data1_out[31]_i_1_n_0    | rst                                       |               12 |             32 |         2.67 |
+|  sys_clk_IBUF_BUFG | u_cpu/id_ex_reg/read_data2_out[31]_i_1_n_0    | rst                                       |                9 |             32 |         3.56 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[25][31]_i_1_n_0 | rst                                       |               11 |             32 |         2.91 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[22][31]_i_1_n_0 | rst                                       |               13 |             32 |         2.46 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[29][31]_i_1_n_0 | rst                                       |               18 |             32 |         1.78 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/lq_rd[2][4]_i_1_n_0            | u_cpu/lsu_unit/lq_fwd_data[2][31]_i_1_n_0 |                5 |             32 |         6.40 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[11][31]_i_1_n_0 | rst                                       |               15 |             32 |         2.13 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/lq_rd[1][4]_i_1_n_0            | u_cpu/lsu_unit/lq_fwd_data[1][31]_i_1_n_0 |                5 |             32 |         6.40 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[21][31]_i_1_n_0 | rst                                       |               17 |             32 |         1.88 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/lq_rd[0][4]_i_1_n_0            | u_cpu/lsu_unit/lq_fwd_data[0][31]_i_1_n_0 |                7 |             32 |         4.57 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[28][31]_i_1_n_0 | rst                                       |               14 |             32 |         2.29 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/lq_rd[3][4]_i_1_n_0            | u_cpu/lsu_unit/lq_fwd_data[3][31]_i_1_n_0 |                8 |             32 |         4.00 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[2][31]_i_1_n_0  | rst                                       |               15 |             32 |         2.13 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[27][31]_i_1_n_0 | rst                                       |               17 |             32 |         1.88 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[24][31]_i_1_n_0 | rst                                       |                9 |             32 |         3.56 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[20][31]_i_1_n_0 | rst                                       |               15 |             32 |         2.13 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[23][31]_i_1_n_0 | rst                                       |               21 |             32 |         1.52 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[3][31]_i_1_n_0  | rst                                       |               17 |             32 |         1.88 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[5][31]_i_1_n_0  | rst                                       |               17 |             32 |         1.88 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[13][31]_i_1_n_0 | rst                                       |               10 |             32 |         3.20 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[16][31]_i_1_n_0 | rst                                       |                8 |             32 |         4.00 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[1][31]_i_1_n_0  | rst                                       |                7 |             32 |         4.57 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[17][31]_i_1_n_0 | rst                                       |                8 |             32 |         4.00 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[4][31]_i_1_n_0  | rst                                       |               24 |             32 |         1.33 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[9][31]_i_1_n_0  | rst                                       |               18 |             32 |         1.78 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[18][31]_i_1_n_0 | rst                                       |               15 |             32 |         2.13 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[30][31]_i_1_n_0 | rst                                       |               14 |             32 |         2.29 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[6][31]_i_1_n_0  | rst                                       |               20 |             32 |         1.60 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[10][31]_i_1_n_0 | rst                                       |                7 |             32 |         4.57 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[8][31]_i_1_n_0  | rst                                       |               21 |             32 |         1.52 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[26][31]_i_1_n_0 | rst                                       |               10 |             32 |         3.20 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[15][31]_i_1_n_0 | rst                                       |               13 |             32 |         2.46 |
+| ~sys_clk_IBUF_BUFG | u_cpu/register_file/registers[14][31]_i_1_n_0 | rst                                       |               13 |             32 |         2.46 |
+|  sys_clk_IBUF_BUFG | u_cpu/id_ex_reg/E[0]                          | rst                                       |               14 |             34 |         2.43 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/result_data[31]_i_1_n_0        | rst                                       |               15 |             37 |         2.47 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/lq_rd[2][4]_i_1_n_0            |                                           |               10 |             41 |         4.10 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/lq_rd[1][4]_i_1_n_0            |                                           |               10 |             41 |         4.10 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/lq_rd[0][4]_i_1_n_0            |                                           |               12 |             41 |         3.42 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/lq_rd[3][4]_i_1_n_0            |                                           |                9 |             41 |         4.56 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/do_load_dequeue                | rst                                       |               14 |             42 |         3.00 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/sb_addr[3][31]_i_1_n_0         |                                           |               17 |             59 |         3.47 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/sb_addr[2][31]_i_1_n_0         |                                           |               18 |             59 |         3.28 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/sb_addr[1][31]_i_1_n_0         |                                           |               13 |             59 |         4.54 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/sb_addr                        |                                           |               19 |             59 |         3.11 |
+|  sys_clk_IBUF_BUFG | u_cpu/id_ex_reg/stall_any_inst_0              | rst                                       |               22 |             64 |         2.91 |
+|  sys_clk_IBUF_BUFG | u_cpu/id_ex_reg/irq_flush_done_r_reg_1        | rst                                       |               13 |             70 |         5.38 |
+|  sys_clk_IBUF_BUFG | u_cpu/id_ex_reg/p_0_in                        | rst                                       |               43 |            101 |         2.35 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/E[0]                           | rst                                       |               49 |            105 |         2.14 |
+|  sys_clk_IBUF_BUFG | u_cpu/lsu_unit/instr_out_reg[19][0]           | rst                                       |               48 |            111 |         2.31 |
+|  sys_clk_IBUF_BUFG |                                               | rst                                       |               63 |            113 |         1.79 |
+|  sys_clk_IBUF_BUFG | u_cpu/id_ex_reg/regwrite_out_i_1__1_n_0       | rst                                       |               27 |            134 |         4.96 |
++--------------------+-----------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+
+

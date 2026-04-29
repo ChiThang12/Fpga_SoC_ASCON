@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Wed Apr 29 13:42:57 2026
+# Process ID: 16404
+# Current directory: D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.runs/synth_1
+# Command line: vivado.exe -log pynqz2_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pynqz2_top.tcl
+# Log file: D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.runs/synth_1/pynqz2_top.vds
+# Journal file: D:/PROJECT_RISCV_ASCON/fpga/riscv/riscv.runs/synth_1\vivado.jou
+# Running On: ChiThang, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16434 MB
+#-----------------------------------------------------------
+source pynqz2_top.tcl -notrace
